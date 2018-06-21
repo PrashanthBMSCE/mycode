@@ -1,0 +1,40 @@
+//to update tab
+chrome.tabs.query({url: "http://your website/*"}, function(tab) {
+   // reload tab with one of the methods from linked answer
+   chrome.tabs.reload(tab[0].id) 
+})
+//inbox sdk for side label
+sdk.NavMenu.addNavItem({
+                name:  Reports", routeID: routeID, type: "NAVIGATION", onClick: function (event) { },
+                routeParams: { country: 'india' }, accessory: {
+                type: "DROPDOWN_BUTTON", buttonBackgroundColor: "black", buttonForegroundColor: "white", onClick: function (event) {
+                }
+              }
+            })
+            
+            
+            
+            
+            //inbox sdk code for toolbar app
+              sdk.Toolbars.addToolbarButtonForApp({
+                title: "",
+                arrowColor: "white",
+                iconUrl: chrome.extension.getURL('./images/logo.png'),
+                onClick: function (event) {
+                    //chrome.runtime.sendMessage({ gauth: 'gauth' }, function (response) { })
+                     event.dropdown.el.innerHTML = "<h1>hello</h1>  ";
+                }
+            })
+            
+            //thread button
+            Sdk.Lists.registerThreadRowViewHandler(ThreadRowView => {
+             ThreadRowView.addButton({
+                    title: "title",
+                   
+                    iconUrl: readimg
+
+                  });
+            })
+            //to get URL of any image using extension
+            var userimg = chrome.extension.getURL("images/user2.png");
+            
